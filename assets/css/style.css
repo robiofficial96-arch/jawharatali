@@ -229,3 +229,17 @@ html[lang="ar"] .whatsapp-floating {
   color: #FFFFFF !important;
   font-weight: 700 !important;
 }
+
+/* Language Dropdown Styling */
+.lang-dropdown-menu {
+  transform-origin: top right;
+}
+html[lang="ar"] .lang-dropdown-menu {
+  transform-origin: top left;
+}
+.chevron-icon {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.chevron-icon.rotate-180 {
+  transform: rotate(180deg);
+}

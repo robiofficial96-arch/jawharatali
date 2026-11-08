@@ -5,13 +5,51 @@
  */
 
 function initApp() {
-  // 1. Language Management
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlLang = urlParams.get('lang');
-  const defaultLang = urlLang || localStorage.getItem('jawharat_lang') || 'en';
-  setLanguage(defaultLang);
+  // 1. Language Dropdown Toggle Logic
+  const langContainers = document.querySelectorAll('.lang-dropdown-container');
+  langContainers.forEach(container => {
+    const toggleBtn = container.querySelector('.lang-dropdown-btn');
+    const menu = container.querySelector('.lang-dropdown-menu');
+    const chevron = container.querySelector('.chevron-icon');
 
-  // Bind language switcher buttons
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const willOpen = menu.classList.contains('hidden');
+
+        // Close all language menus first
+        document.querySelectorAll('.lang-dropdown-menu').forEach(m => m.classList.add('hidden'));
+        document.querySelectorAll('.chevron-icon').forEach(c => c.classList.remove('rotate-180'));
+        document.querySelectorAll('.lang-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+        if (willOpen) {
+          menu.classList.remove('hidden');
+          if (chevron) chevron.classList.add('rotate-180');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  // Close dropdown on click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-dropdown-container')) {
+      document.querySelectorAll('.lang-dropdown-menu').forEach(m => m.classList.add('hidden'));
+      document.querySelectorAll('.chevron-icon').forEach(c => c.classList.remove('rotate-180'));
+      document.querySelectorAll('.lang-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    }
+  });
+
+  // Close dropdown on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.lang-dropdown-menu').forEach(m => m.classList.add('hidden'));
+      document.querySelectorAll('.chevron-icon').forEach(c => c.classList.remove('rotate-180'));
+      document.querySelectorAll('.lang-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    }
+  });
+
+  // Bind language item buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selectedLang = btn.getAttribute('data-lang');
@@ -20,6 +58,12 @@ function initApp() {
       }
     });
   });
+
+  // Initial Language setup
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get('lang');
+  const defaultLang = urlLang || localStorage.getItem('jawharat_lang') || 'en';
+  setLanguage(defaultLang);
 
   // 2. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -38,13 +82,11 @@ function initApp() {
   if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Reset styles for all filter buttons
         filterBtns.forEach(b => {
           b.classList.remove('bg-brand-red', 'text-white');
           b.classList.add('bg-slate-100', 'text-slate-700');
         });
 
-        // Set active button style
         btn.classList.remove('bg-slate-100', 'text-slate-700');
         btn.classList.add('bg-brand-red', 'text-white');
 
@@ -204,14 +246,54 @@ function setLanguage(lang) {
     }
   });
 
-  // Update active states on language buttons
+  // Update button text labels
+  const langLabelsDesktop = {
+    en: 'English',
+    ar: 'العربية',
+    bn: 'বাংলা'
+  };
+  const langLabelsMobile = {
+    en: 'EN',
+    ar: 'عربي',
+    bn: 'বাং'
+  };
+
+  document.querySelectorAll('.desktop-lang-text').forEach(el => {
+    el.textContent = langLabelsDesktop[lang] || lang.toUpperCase();
+  });
+
+  document.querySelectorAll('.mobile-lang-text').forEach(el => {
+    el.textContent = langLabelsMobile[lang] || lang.toUpperCase();
+  });
+
+  // Update active states on language dropdown items
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    if (btn.getAttribute('data-lang') === lang) {
-      btn.classList.add('bg-brand-red', 'text-white', 'font-bold');
-      btn.classList.remove('text-slate-600');
+    const bLang = btn.getAttribute('data-lang');
+    const isSelected = (bLang === lang);
+    const checkEl = btn.querySelector('.lang-check');
+    const dotEl = btn.querySelector('.lang-indicator-dot');
+
+    if (isSelected) {
+      btn.classList.add('bg-red-50', 'text-brand-red', 'font-bold');
+      btn.classList.remove('text-slate-700', 'font-semibold');
+      if (checkEl) checkEl.classList.remove('hidden');
+      if (dotEl) {
+        dotEl.classList.add('bg-brand-red');
+        dotEl.classList.remove('bg-slate-300');
+      }
     } else {
-      btn.classList.remove('bg-brand-red', 'text-white', 'font-bold');
-      btn.classList.add('text-slate-600');
+      btn.classList.remove('bg-red-50', 'text-brand-red', 'font-bold');
+      btn.classList.add('text-slate-700', 'font-semibold');
+      if (checkEl) checkEl.classList.add('hidden');
+      if (dotEl) {
+        dotEl.classList.remove('bg-brand-red');
+        dotEl.classList.add('bg-slate-300');
+      }
     }
   });
+
+  // Close all language dropdown menus after selection
+  document.querySelectorAll('.lang-dropdown-menu').forEach(m => m.classList.add('hidden'));
+  document.querySelectorAll('.chevron-icon').forEach(c => c.classList.remove('rotate-180'));
+  document.querySelectorAll('.lang-dropdown-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
 }
