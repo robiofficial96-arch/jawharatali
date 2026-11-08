@@ -108,7 +108,7 @@ function initApp() {
   const preselectedSector = urlParams.get('sector');
   const sectorSelect = document.getElementById('workerSector') || document.getElementById('formSector');
 
-  if (sectorSelect && preselectedSector) {
+  if (sectorSelect && sectorSelect.options && preselectedSector) {
     for (let i = 0; i < sectorSelect.options.length; i++) {
       if (sectorSelect.options[i].value.toLowerCase().includes(preselectedSector.toLowerCase())) {
         sectorSelect.selectedIndex = i;

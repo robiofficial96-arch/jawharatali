@@ -1,6 +1,6 @@
 # Jawharat Ali (جوهرة علي) - Manpower Solutions Saudi Arabia
 
-Official corporate website for **Jawharat Ali**, a licensed Saudi Arabian manpower supply agency headquartered in Riyadh (King Fahd Road, Al Olaya). Supplying vetted cleaners, construction labor, drivers, hospitality staff, and MEP technicians across the Kingdom with 100% Qiwa and MHRSD compliance.
+Official corporate website for **Jawharat Ali**, a licensed Saudi Arabian manpower supply agency based in Makkah. Supplying vetted cleaners, construction labor, drivers, hospitality staff, and MEP technicians across the Kingdom with 100% Qiwa and MHRSD compliance.
 
 ## ✨ Features
 
@@ -13,7 +13,7 @@ Official corporate website for **Jawharat Ali**, a licensed Saudi Arabian manpow
   - Collapsible mobile drawer with hamburger menu (`☰`).
 - **6 Distinct Pages**:
   - `index.html`: Home & Executive Overview
-  - `about.html`: Corporate Profile & Riyadh HQ
+  - `about.html`: Corporate Profile
   - `services.html`: 6 Sector Categories with Filter Tabs
   - `why-us.html`: Saudi Vision 2030, Qiwa, & Labor Law Compliance
   - `process.html`: 4-Step Onboarding & Deployment Workflow
