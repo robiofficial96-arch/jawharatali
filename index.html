@@ -184,12 +184,11 @@
     </div>
   </nav>
 
-  <!-- ================= HERO SECTION (CLEAN, AIRY & EXECUTIVE BEAUTY) =================
-       SPECIAL USER REQUIREMENT:
-       - Phone view (< 768px): Only image is displayed
-       - Web view (>= 768px): Left side concise text & buttons, right side hero image
+<!-- ================= HERO SECTION (CLEAN, AIRY & EXECUTIVE BEAUTY) =================
+       Phone view (< 768px): Workforce team portrait at top with bottom-melt gradient into pure white, followed by redesigned mobile content.
+       Desktop view (>= 768px): Left side concise text & actions, right side hero team portrait.
   -->
-  <section class="hero-container relative py-12 md:py-16 lg:py-20 overflow-hidden bg-white">
+  <section class="hero-container relative pt-4 pb-10 md:py-16 lg:py-20 overflow-hidden bg-white">
     <!-- Ambient luxury background glow (subtle, pure white base preserved) -->
     <div class="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
       <div class="absolute -top-32 right-1/4 w-[650px] h-[650px] bg-red-100/30 rounded-full blur-[140px]"></div>
@@ -199,13 +198,46 @@
 
     <div class="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
       
-      <div class="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-14">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 lg:gap-14">
         
-        <!-- LEFT CONTENT COLUMN (Desktop View Only: Concise, Minimal, Impactful) -->
-        <div class="hero-content-col w-full md:w-7/12 lg:w-3/5 xl:w-[57%] flex flex-col justify-center items-start text-left rtl:text-right">
+        <!-- HERO IMAGE COLUMN (Order 1 on Mobile, Order 2 on Desktop) -->
+        <div class="hero-image-col w-full md:w-5/12 lg:w-1/2 xl:w-[48%] order-1 md:order-2">
+          <div class="relative max-w-lg md:max-w-none mx-auto">
+            <!-- Soft luxury backdrop glow behind workforce -->
+            <div class="absolute inset-0 bg-gradient-to-b from-red-500/5 via-amber-500/5 to-transparent rounded-full blur-3xl -z-10 transform -translate-y-4"></div>
+            
+            <div class="relative overflow-hidden">
+              <img 
+                id="heroWorkerImage"
+                src="assets/images/hero-team.webp" 
+                alt="Jawharat Ali Professional Saudi Workforce Team"
+                class="w-full h-auto object-contain object-top block max-w-md md:max-w-none mx-auto select-none"
+                loading="eager"
+                fetchpriority="high"
+              >
+              <!-- Bottom gradient fade: melts smoothly into white page background -->
+              <div class="hero-fade-gradient absolute inset-x-0 bottom-0 h-24 sm:h-32 md:h-28 pointer-events-none"></div>
+
+              <!-- Top Left Floating Badge -->
+              <div class="absolute top-2 left-2 sm:top-4 sm:left-4 z-10 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-md px-3 py-1.5 rounded-full flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-[11px] sm:text-xs font-bold text-slate-800">Licensed KSA Manpower</span>
+              </div>
+
+              <!-- Top Right Floating Badge -->
+              <div class="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-md px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span class="text-[11px] sm:text-xs font-bold text-slate-800">100% Qiwa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO CONTENT COLUMN (Order 2 on Mobile, Order 1 on Desktop) -->
+        <div class="hero-content-col w-full md:w-7/12 lg:w-1/2 xl:w-[52%] order-2 md:order-1 flex flex-col justify-center items-center md:items-start text-center md:text-left rtl:md:text-right rtl:md:items-start px-2 sm:px-0">
           
           <!-- Subtle Saudi Tag with glowing pulse -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-red-50/80 border border-red-200/70 text-brand-red text-xs font-bold mb-6 shadow-xs tracking-wide">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50/90 border border-red-200/80 text-brand-red text-[11px] sm:text-xs font-bold mb-3 sm:mb-5 shadow-xs">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-red"></span>
@@ -214,95 +246,59 @@
           </div>
 
           <!-- Crisp Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-[-0.03em] text-slate-950 leading-[1.14] mb-5 max-w-3xl" data-i18n="heroTitle">
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-[-0.03em] text-slate-950 leading-[1.18] mb-3 sm:mb-5 max-w-2xl" data-i18n="heroTitle">
             Reliable & Certified <span class="text-brand-red">Manpower Supply</span> in Saudi Arabia
           </h1>
 
-          <!-- Concise Description (1-2 lines) -->
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 max-w-xl font-normal" data-i18n="heroDesc">
+          <!-- Concise Description -->
+          <p class="text-xs sm:text-base lg:text-lg text-slate-600 leading-relaxed mb-4 sm:mb-6 max-w-xl font-normal" data-i18n="heroDesc">
             Supplying vetted cleaners, construction labor, drivers, hospitality staff, and MEP technicians across KSA with 100% Qiwa and labor compliance.
           </p>
 
-          <!-- Inline Trust Checkpoints (Fills white void with prestige) -->
-          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-slate-700 mb-8">
-            <div class="flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-              <span>100% Qiwa & Ajeer Verified</span>
+          <!-- Inline Trust Checkpoints (Pills on Mobile) -->
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 text-[11px] sm:text-xs font-bold text-slate-700 mb-5 sm:mb-8">
+            <div class="inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200/80 px-2.5 py-1.5 rounded-lg shadow-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>100% Qiwa & Ajeer</span>
             </div>
-            <div class="flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-              <span>24-48h Rapid Mobilization</span>
+            <div class="inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200/80 px-2.5 py-1.5 rounded-lg shadow-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>24-48h Mobilization</span>
             </div>
-            <div class="flex items-center gap-1.5">
-              <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-              <span>72h Replacement Guarantee</span>
+            <div class="inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200/80 px-2.5 py-1.5 rounded-lg shadow-xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>72h Free Replacement</span>
             </div>
           </div>
 
-          <!-- Clean Executive Actions -->
-          <div class="flex flex-wrap items-center gap-3.5 mb-10 w-full sm:w-auto">
-            <a href="contact.html" class="btn-executive-primary px-8 py-3.5 text-sm sm:text-base flex items-center justify-center group">
+          <!-- Touch-friendly Executive Actions -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-3 mb-6 sm:mb-10 w-full sm:w-auto">
+            <a href="contact.html" class="btn-executive-primary px-8 py-3.5 text-sm sm:text-base flex items-center justify-center gap-2 group shadow-md active:scale-[0.98] transition-all">
               <span data-i18n="heroBtnRequest">Request Workers</span>
-              <svg class="w-4 h-4 ml-2 rtl:rotate-180 rtl:mr-2 rtl:ml-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
             
-            <a href="services.html" class="btn-executive-secondary px-7 py-3.5 text-sm sm:text-base inline-flex items-center justify-center">
+            <a href="services.html" class="btn-executive-secondary px-7 py-3.5 text-sm sm:text-base inline-flex items-center justify-center border border-slate-200 shadow-xs active:scale-[0.98] transition-all">
               <span data-i18n="heroBtnExplore">View Categories</span>
             </a>
           </div>
 
-          <!-- Integrated Executive Metrics Strip (Fortune-500 Standard) -->
-          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200/80 w-full max-w-xl">
-            <div>
-              <div class="text-3xl lg:text-4xl font-black text-slate-950 tracking-tight" data-i18n="heroStat1Number">5,000+</div>
-              <div class="text-[11px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-1" data-i18n="heroStat1Label">Deployed Workers</div>
+          <!-- Integrated Executive Metrics Strip -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-5 sm:pt-6 border-t border-slate-200/80 w-full max-w-xl text-center md:text-left rtl:md:text-right">
+            <div class="px-1">
+              <div class="text-xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight" data-i18n="heroStat1Number">5,000+</div>
+              <div class="text-[9.5px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-0.5" data-i18n="heroStat1Label">Deployed Workers</div>
             </div>
-            <div class="border-l border-slate-200/80 pl-6 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-6">
-              <div class="text-3xl lg:text-4xl font-black text-brand-red tracking-tight" data-i18n="heroStat2Number">100%</div>
-              <div class="text-[11px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-1" data-i18n="heroStat2Label">Qiwa Compliant</div>
+            <div class="border-l border-slate-200/80 pl-2 sm:pl-6 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-2 sm:rtl:pr-6 px-1">
+              <div class="text-xl sm:text-3xl lg:text-4xl font-black text-brand-red tracking-tight" data-i18n="heroStat2Number">100%</div>
+              <div class="text-[9.5px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-0.5" data-i18n="heroStat2Label">Qiwa Compliant</div>
             </div>
-            <div class="border-l border-slate-200/80 pl-6 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-6">
-              <div class="text-3xl lg:text-4xl font-black text-slate-950 tracking-tight" data-i18n="heroStat3Number">24-48h</div>
-              <div class="text-[11px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-1" data-i18n="heroStat3Label">Fast Mobilization</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- RIGHT IMAGE COLUMN (Clean, High-Res Photographic Hero Image with Floating Badges) -->
-        <div class="hero-image-col w-full md:w-5/12 lg:w-2/5 xl:w-[43%]">
-          <div class="relative group">
-            <!-- Subtle warm illumination glow -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-red-600/10 to-amber-500/10 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
-
-            <!-- Image container -->
-            <div class="relative rounded-3xl overflow-hidden border border-slate-200/90 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.12)] bg-white">
-              <img 
-                id="heroWorkerImage"
-                src="assets/images/hero-workers.jpg" 
-                alt="Jawharat Ali Professional Saudi Workforce Team"
-                class="w-full h-auto object-cover aspect-[4/3] block transition-transform duration-700 group-hover:scale-[1.02]"
-                loading="eager"
-              >
-
-              <!-- Floating Badge Top Left -->
-              <div class="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-md px-3.5 py-1.5 rounded-full flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs font-bold text-slate-800">Licensed KSA Manpower</span>
-              </div>
-
-              <!-- Floating Badge Bottom Left -->
-              <div class="absolute bottom-4 left-4 right-4 sm:right-auto z-10 bg-white/95 backdrop-blur-xl border border-slate-200/80 shadow-xl px-4 py-2.5 rounded-2xl flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-red-50 text-brand-red flex items-center justify-center font-bold flex-shrink-0">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <div>
-                  <div class="text-xs font-extrabold text-slate-900 leading-tight">Qiwa & MHRSD Verified</div>
-                  <div class="text-[10px] text-slate-500 font-medium">Ready for immediate contract</div>
-                </div>
-              </div>
+            <div class="border-l border-slate-200/80 pl-2 sm:pl-6 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-2 sm:rtl:pr-6 px-1">
+              <div class="text-xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight" data-i18n="heroStat3Number">24-48h</div>
+              <div class="text-[9.5px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-0.5" data-i18n="heroStat3Label">Fast Mobilization</div>
             </div>
           </div>
+
         </div>
 
       </div>

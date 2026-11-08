@@ -135,31 +135,18 @@ html[lang="en"] body {
   border-color: var(--brand-red);
 }
 
-/* HERO SECTION RESPONSIVE STYLING (Strict User Requirement)
-   "hero section e phn view te sudhu img thakbe r web view te right side e img left side e lekha button content thakbe"
+/* HERO SECTION RESPONSIVE STYLING
+   Phone view: Image at top with bottom-melt gradient, followed by redesigned content.
+   Desktop view: Content on left, Image on right.
 */
-@media (max-width: 767px) {
-  /* Mobile Phone view (< 768px): Hide left content completely */
-  .hero-content-col {
-    display: none !important;
-  }
-  
-  /* Mobile Phone view: Show hero image full width */
-  .hero-image-col {
-    width: 100% !important;
-    display: block !important;
-    padding-top: 0 !important;
-  }
-
-  .hero-container {
-    padding-top: 0.75rem !important;
-    padding-bottom: 1.5rem !important;
-  }
+.hero-fade-gradient {
+  background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0.96) 40%, rgba(255, 255, 255, 0.45) 70%, transparent 100%);
 }
 
-@media (min-width: 768px) {
-  .hero-content-col {
-    display: flex !important;
+@media (max-width: 767px) {
+  .hero-container {
+    padding-top: 0.5rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
