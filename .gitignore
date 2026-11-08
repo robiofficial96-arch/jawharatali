@@ -6,3 +6,4 @@ view*.png
 dom_dump.txt
 *.tmp
 node_modules/
+deploy/
