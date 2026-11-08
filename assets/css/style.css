@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Jawharat Ali Manpower Solutions - Master Brand Styling
+   Clean, Minimal, High-Standard Executive Theme:
+     - Pure White Base: #FFFFFF & #F8FAFC
+     - Deep Slate Text: #0F172A & #334155
+     - Brand Red Accent: #C7222A (Crimson Authority)
+     - Luxury Brand Typography: 'Cinzel' & 'Outfit'
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --brand-red: #C7222A;
+  --brand-red-dark: #9F151C;
+  --brand-charcoal: #3E3E3E;
+  --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ar: 'Cairo', 'Tajawal', -apple-system, sans-serif;
+  --font-bn: 'Hind Siliguri', 'Noto Sans Bengali', -apple-system, sans-serif;
+  --font-logo: 'Cinzel', serif;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-en);
+  background-color: #FFFFFF;
+  color: #1E293B;
+  overflow-x: hidden;
+}
+
+/* Brand Wordmark Styling - Luxury, Distinctive, Sculpted */
+.brand-logo-text {
+  font-family: 'Cinzel', serif !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Executive Card Elevation */
+.premium-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(199, 34, 42, 0.25);
+  box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(199, 34, 42, 0.04);
+}
+
+/* Executive Primary Button */
+.btn-executive-primary {
+  background: linear-gradient(135deg, #C7222A 0%, #9C141B 100%);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 25px -5px rgba(199, 34, 42, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-executive-primary:hover {
+  background: linear-gradient(135deg, #D42831 0%, #A8171E 100%);
+  box-shadow: 0 14px 30px -4px rgba(199, 34, 42, 0.38);
+  transform: translateY(-2px);
+}
+.btn-executive-primary:active {
+  transform: translateY(0);
+}
+
+/* Executive Secondary Button */
+.btn-executive-secondary {
+  background: #F1F5F9;
+  color: #1E293B !important;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  border: 1px solid #E2E8F0;
+  transition: all 0.25s ease;
+}
+.btn-executive-secondary:hover {
+  background: #E2E8F0;
+  color: #0F172A !important;
+  border-color: #CBD5E1;
+}
+
+/* Language font assignments */
+html[lang="ar"] body {
+  font-family: var(--font-ar);
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="bn"] body {
+  font-family: var(--font-bn);
+  direction: ltr;
+  text-align: left;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-en);
+  direction: ltr;
+  text-align: left;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-red);
+}
+
+/* Utility brand classes */
+.text-brand-red {
+  color: var(--brand-red);
+}
+.bg-brand-red {
+  background-color: var(--brand-red);
+}
+.hover\:bg-brand-redDark:hover {
+  background-color: var(--brand-red-dark);
+}
+.border-brand-red {
+  border-color: var(--brand-red);
+}
+
+/* HERO SECTION RESPONSIVE STYLING (Strict User Requirement)
+   "hero section e phn view te sudhu img thakbe r web view te right side e img left side e lekha button content thakbe"
+*/
+@media (max-width: 767px) {
+  /* Mobile Phone view (< 768px): Hide left content completely */
+  .hero-content-col {
+    display: none !important;
+  }
+  
+  /* Mobile Phone view: Show hero image full width */
+  .hero-image-col {
+    width: 100% !important;
+    display: block !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-container {
+    padding-top: 0.75rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content-col {
+    display: flex !important;
+  }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[lang="ar"] .whatsapp-floating {
+  right: auto;
+  left: 24px;
+}
+
+@media (max-width: 1023px) {
+  .whatsapp-floating {
+    bottom: 82px !important;
+    right: 16px;
+  }
+  html[lang="ar"] .whatsapp-floating {
+    right: auto;
+    left: 16px;
+  }
+}
+
+.whatsapp-floating:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Mobile App-Style Bottom Navigation Bar (Footer Navbar) */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 990;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.06);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Category Filter active state */
+.category-filter-btn.active {
+  background-color: var(--brand-red);
+  color: #FFFFFF;
+}
+
+
+/* Hide scrollbar for mobile horizontal navbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile Nav active state pill */
+.mobile-nav-link.active {
+  background-color: var(--brand-red) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}

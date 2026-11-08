@@ -1,0 +1,52 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);">
+  <defs>
+    <linearGradient id="cleanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E83842" />
+      <stop offset="100%" stop-color="#C7222A" />
+    </linearGradient>
+  </defs>
+  <!-- Background Sparkle &amp; Subtle Ambient -->
+  <circle cx="500" cy="100" r="140" fill="#0284C7" opacity="0.08" />
+  <circle cx="100" cy="300" r="160" fill="#C7222A" opacity="0.05" />
+  <!-- Clean Commercial Floor -->
+  <polygon points="50,380 550,380 510,260 90,260" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5" />
+  <line x1="90" y1="260" x2="50" y2="380" stroke="#0284C7" stroke-width="1.5" opacity="0.3" />
+  <line x1="510" y1="260" x2="550" y2="380" stroke="#0284C7" stroke-width="1.5" opacity="0.3" />
+  <ellipse cx="300" cy="320" rx="180" ry="25" fill="#38BDF8" opacity="0.1" />
+  <!-- Sparkles -->
+  <path d="M420,130 L425,145 L440,150 L425,155 L420,170 L415,155 L400,150 L415,145 Z" fill="#0284C7" />
+  <path d="M180,180 L183,190 L195,193 L183,196 L180,208 L177,196 L165,193 L177,190 Z" fill="#F59E0B" />
+  <path d="M470,220 L473,230 L483,233 L473,236 L470,245 L467,236 L457,233 L467,230 Z" fill="#0EA5E9" />
+  <!-- Cleaning Machine / Cart -->
+  <rect x="360" y="220" width="90" height="110" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" />
+  <rect x="375" y="235" width="60" height="25" rx="4" fill="#0EA5E9" />
+  <circle cx="380" cy="335" r="14" fill="#334155" stroke="#94A3B8" stroke-width="3" />
+  <circle cx="430" cy="335" r="14" fill="#334155" stroke="#94A3B8" stroke-width="3" />
+  <!-- Cleaner Character -->
+  <g transform="translate(190, 80)">
+    <rect x="65" y="190" width="22" height="95" fill="#334155" rx="4" />
+    <rect x="95" y="190" width="22" height="95" fill="#334155" rx="4" />
+    <rect x="60" y="280" width="28" height="12" fill="#0F172A" rx="3" />
+    <rect x="95" y="280" width="28" height="12" fill="#0F172A" rx="3" />
+    <path d="M45,70 L135,70 L145,195 L35,195 Z" fill="url(#cleanGrad)" />
+    <polygon points="75,70 105,70 90,95" fill="url(#redAccent)" />
+    <!-- Chest Brand Badge -->
+    <rect x="105" y="95" width="26" height="18" rx="3" fill="#FFFFFF" stroke="#C7222A" stroke-width="1" />
+    <text x="118" y="107" font-size="7" fill="#C7222A" font-weight="bold" text-anchor="middle">JA</text>
+    <circle cx="35" cy="180" r="10" fill="#FACC15" />
+    <circle cx="150" cy="175" r="10" fill="#FACC15" />
+    <circle cx="90" cy="35" r="26" fill="#F5D0B5" />
+    <path d="M64,30 Q90,5 116,30 Z" fill="#0F172A" />
+    <!-- Mop -->
+    <line x1="28" y1="80" x2="40" y2="285" stroke="#64748B" stroke-width="4" />
+    <rect x="20" y="285" width="38" height="12" rx="3" fill="#0284C7" />
+    <path d="M16,297 L62,297" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" />
+  </g>
+  <!-- Category Badge -->
+  <rect x="25" y="25" width="200" height="32" rx="16" fill="#FFFFFF" stroke="#C7222A" stroke-width="1.5" />
+  <text x="125" y="46" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" fill="#C7222A" text-anchor="middle">CLEANING &amp; JANITORIAL</text>
+</svg>

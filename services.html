@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Categories | Jawharat Ali Manpower Solutions</title>
+  
+  <meta name="description" content="Explore our specialized workforce categories in Saudi Arabia: Cleaners, Construction Labor, Hospitality Staff, Drivers, Logistics, and Technicians.">
+  <meta name="theme-color" content="#C7222A">
+
+  <link rel="icon" type="image/svg+xml" href="jawharatali.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#C7222A',
+              redDark: '#9F151C',
+              redLight: '#E83842',
+              charcoal: '#3E3E3E',
+              slate: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            cairo: ['Cairo', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-red selection:text-white pb-20 lg:pb-0">
+
+        <!-- ================= MASTER NAVBAR (EXECUTIVE & REFINED) ================= -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-100/90 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03)] transition-all duration-300">
+    <div class="max-w-[1650px] mx-auto px-3 sm:px-8 lg:px-12 xl:px-16">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand Logo & Name (Box-less, Executive Font & Subtitle) -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3.5 group">
+          <img src="jawharatali.svg" alt="Jawharat Ali Logo" class="h-8 sm:h-12 w-auto object-contain flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="flex flex-col">
+            <span class="brand-logo-text text-base sm:text-2xl font-black tracking-[0.05em] text-slate-950 uppercase group-hover:text-brand-red transition-colors leading-tight whitespace-nowrap">
+              JAWHARAT <span class="text-brand-red">ALI</span>
+            </span>
+            <span class="text-[8px] sm:text-[10px] tracking-[0.12em] text-slate-400 uppercase font-extrabold mt-0.5 whitespace-nowrap">
+              Manpower Solutions &bull; KSA
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Sophisticated Underline Indicator) -->
+        <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+          <a href="index.html" class="hover:text-brand-red transition-colors py-1" data-i18n="navHome">Home</a>
+          <a href="about.html" class="hover:text-brand-red transition-colors py-1" data-i18n="navAbout">About Us</a>
+          <a href="services.html" class="text-brand-red font-bold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-red after:rounded-full" data-i18n="navServices">Categories</a>
+          <a href="why-us.html" class="hover:text-brand-red transition-colors py-1" data-i18n="navWhyUs">Why Us</a>
+          <a href="process.html" class="hover:text-brand-red transition-colors py-1" data-i18n="navProcess">Process</a>
+          <a href="contact.html" class="hover:text-brand-red transition-colors py-1" data-i18n="navContact">Contact</a>
+        </div>
+
+        <!-- Desktop Right: Segmented Language Switcher & Executive CTA -->
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Segmented Language Switcher -->
+          <div class="flex items-center bg-slate-100/90 p-1 rounded-xl border border-slate-200/70 text-xs font-semibold">
+            <button type="button" data-lang="en" class="lang-btn px-3 py-1 rounded-lg transition-all font-bold">EN</button>
+            <button type="button" data-lang="ar" class="lang-btn px-3 py-1 rounded-lg transition-all font-bold">عربي</button>
+            <button type="button" data-lang="bn" class="lang-btn px-3 py-1 rounded-lg transition-all font-bold">বাং</button>
+          </div>
+
+          <a href="contact.html" class="btn-executive-primary px-6 py-2.5 text-sm flex items-center gap-2">
+            <span data-i18n="navRequestBtn">Request Manpower</span>
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Right Controls: Compact Lang Switch & Hamburger Button -->
+        <div class="flex lg:hidden items-center gap-1.5 sm:gap-2">
+          <!-- Compact Language Switcher -->
+          <div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 text-[10px] font-bold">
+            <button type="button" data-lang="en" class="lang-btn px-1.5 py-0.5 rounded-md">EN</button>
+            <button type="button" data-lang="ar" class="lang-btn px-1.5 py-0.5 rounded-md">عربي</button>
+            <button type="button" data-lang="bn" class="lang-btn px-1.5 py-0.5 rounded-md">বাং</button>
+          </div>
+
+          <!-- Hamburger Button (Burger Menu as requested) -->
+          <button id="mobileMenuBtn" type="button" class="p-1.5 rounded-lg text-slate-700 hover:text-brand-red hover:bg-slate-100 transition focus:outline-none" aria-label="Toggle Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white/98 backdrop-blur-xl px-4 py-4 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-4 py-2.5 rounded-xl font-semibold transition text-slate-700 hover:bg-slate-50 hover:text-brand-red" data-i18n="navHome">Home</a>
+      <a href="about.html" class="block px-4 py-2.5 rounded-xl font-semibold transition text-slate-700 hover:bg-slate-50 hover:text-brand-red" data-i18n="navAbout">About Us</a>
+      <a href="services.html" class="block px-4 py-2.5 rounded-xl font-bold transition bg-red-50 text-brand-red" data-i18n="navServices">Categories</a>
+      <a href="why-us.html" class="block px-4 py-2.5 rounded-xl font-semibold transition text-slate-700 hover:bg-slate-50 hover:text-brand-red" data-i18n="navWhyUs">Why Us</a>
+      <a href="process.html" class="block px-4 py-2.5 rounded-xl font-semibold transition text-slate-700 hover:bg-slate-50 hover:text-brand-red" data-i18n="navProcess">Process</a>
+      <a href="contact.html" class="block px-4 py-2.5 rounded-xl font-semibold transition text-slate-700 hover:bg-slate-50 hover:text-brand-red" data-i18n="navContact">Contact</a>
+      <div class="pt-2">
+        <a href="contact.html" class="btn-executive-primary w-full py-3 flex items-center justify-center gap-2">
+          <span data-i18n="navRequestBtn">Request Manpower</span>
+          <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= LUXURY PAGE BANNER ================= -->
+  <section class="relative py-14 md:py-20 bg-slate-50/60 border-b border-slate-100 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+      <div class="absolute -top-24 right-1/4 w-[450px] h-[450px] bg-red-100/35 rounded-full blur-[110px]"></div>
+    </div>
+    <div class="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-brand-red text-xs font-bold uppercase tracking-wider mb-3" data-i18n="servicesBadge">
+        Workforce Sectors
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 mb-3 tracking-tight" data-i18n="pageTitleServices">
+        Worker Categories
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base max-w-xl font-normal" data-i18n="pageSubtitleServices">
+        Screened and ready workforce across core industries.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= WORKER CATEGORIES GRID (AIRY & EXECUTIVE) ================= -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      
+      <!-- Minimal Filter Buttons -->
+      <div class="flex flex-wrap items-center gap-2.5 mb-12">
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-brand-red text-white shadow-xs transition-all" data-filter="all" data-i18n="catFilterAll">All</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="cleaning" data-i18n="catFilterCleaning">Cleaning</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="construction" data-i18n="catFilterConstruction">Construction</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="hospitality" data-i18n="catFilterHospitality">Hospitality</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="logistics" data-i18n="catFilterLogistics">Logistics</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="drivers" data-i18n="catFilterDrivers">Drivers</button>
+        <button type="button" class="category-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-filter="technical" data-i18n="catFilterTechnical">Technical</button>
+      </div>
+
+      <!-- Categories 6-Card Grid (Ultra-Realistic Corporate Photographs) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- CARD 1: Cleaning -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="cleaning">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/cleaning.jpg" alt="Cleaning Personnel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catCleaningAvailability">150+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catCleaningTitle">Cleaning & Janitorial</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catCleaningDesc">Commercial, office, hospitality, and specialized facility cleaning staff.</p>
+            </div>
+            <a href="contact.html?sector=cleaning" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Construction -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="construction">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/construction.jpg" alt="Construction Labor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catConstructionAvailability">300+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catConstructionTitle">Construction & Civil</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catConstructionDesc">Skilled masons, carpenters, steel fixers, painters, and site helpers.</p>
+            </div>
+            <a href="contact.html?sector=construction" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Hospitality -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="hospitality">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/hospitality.jpg" alt="Hospitality Staff" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catHospitalityAvailability">100+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catHospitalityTitle">Hospitality & Catering</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catHospitalityDesc">Waiters, baristas, kitchen stewards, and banquet support staff.</p>
+            </div>
+            <a href="contact.html?sector=hospitality" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: Logistics -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="logistics">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/logistics.jpg" alt="Logistics Workforce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catLogisticsAvailability">120+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catLogisticsTitle">Logistics & Warehouse</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catLogisticsDesc">Forklift operators, pick-and-pack crews, and inventory helpers.</p>
+            </div>
+            <a href="contact.html?sector=logistics" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 5: Drivers -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="drivers">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/drivers.jpg" alt="Drivers and Operators" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catDriversAvailability">80+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catDriversTitle">Drivers & Operators</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catDriversDesc">Licensed heavy bus, truck, trailer drivers, and equipment operators.</p>
+            </div>
+            <a href="contact.html?sector=drivers" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 6: Technical -->
+        <div class="category-card premium-card rounded-3xl overflow-hidden flex flex-col group" data-category="technical">
+          <div class="h-60 overflow-hidden relative">
+            <img src="assets/images/technical.jpg" alt="Technical Workforce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-900 shadow-sm" data-i18n="catTechnicalAvailability">90+ Ready</span>
+          </div>
+          <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+            <div>
+              <h3 class="text-xl font-bold text-slate-950 mb-2 group-hover:text-brand-red transition-colors" data-i18n="catTechnicalTitle">MEP & Technical Workforce</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal" data-i18n="catTechnicalDesc">Electricians, plumbers, HVAC technicians, and certified welders.</p>
+            </div>
+            <a href="contact.html?sector=technical" class="text-sm font-bold text-brand-red hover:text-brand-redDark inline-flex items-center gap-1.5 group/link">
+              <span data-i18n="btnHireCategory">Request Category</span>
+              <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CALL TO ACTION ================= -->
+  <section class="py-16 bg-slate-50/50 border-t border-slate-100">
+    <div class="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <div class="rounded-3xl bg-white border border-slate-200/80 p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div>
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-950 mb-2 tracking-tight" data-i18n="ctaBannerTitle">
+            Ready to Scale Your Workforce in Saudi Arabia?
+          </h3>
+          <p class="text-sm text-slate-600 font-normal" data-i18n="ctaBannerDesc">
+            Contact our team in Riyadh for immediate candidate matching and Qiwa contracting.
+          </p>
+        </div>
+        <a href="contact.html" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-red to-brand-redDark text-white font-extrabold text-sm shadow-md shadow-brand-red/25 hover:shadow-lg transition-all whitespace-nowrap" data-i18n="ctaBannerBtn">
+          Request Workers
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MASTER FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 pt-14 pb-8">
+    <div class="max-w-[1650px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-100">
+        <div class="lg:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="jawharatali.svg" alt="Jawharat Ali Logo" class="h-10 w-auto object-contain flex-shrink-0">
+            <div class="flex flex-col">
+              <span class="brand-logo-text text-lg sm:text-xl font-extrabold tracking-[0.06em] text-slate-950 uppercase leading-tight">
+                JAWHARAT <span class="text-brand-red">ALI</span>
+              </span>
+              <span class="text-[9px] tracking-[0.14em] text-slate-400 uppercase font-extrabold mt-0.5 whitespace-nowrap">
+                Manpower Solutions &bull; KSA
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed max-w-sm" data-i18n="footerAboutDesc">
+            Jawharat Ali is a licensed Saudi manpower agency providing compliant workforce solutions across the Kingdom.
+          </p>
+          <div class="space-y-1 text-xs text-slate-500">
+            <div data-i18n="footerCR">CR: 1010892410</div>
+            <div data-i18n="footerLicense">MHRSD License: 45001928</div>
+            <div class="text-emerald-700 font-medium" data-i18n="footerQiwaMember">Qiwa Certified Partner & Ajeer Registered</div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3" data-i18n="footerQuickLinks">Navigation</h4>
+          <ul class="space-y-2 text-xs text-slate-600">
+            <li><a href="index.html" class="hover:text-brand-red transition" data-i18n="navHome">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-red transition" data-i18n="navAbout">About Us</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="navServices">Categories</a></li>
+            <li><a href="why-us.html" class="hover:text-brand-red transition" data-i18n="navWhyUs">Why Us</a></li>
+            <li><a href="process.html" class="hover:text-brand-red transition" data-i18n="navProcess">Process</a></li>
+            <li><a href="contact.html" class="hover:text-brand-red transition" data-i18n="navContact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3" data-i18n="footerCategories">Categories</h4>
+          <ul class="space-y-2 text-xs text-slate-600">
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterCleaning">Cleaning</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterConstruction">Construction</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterHospitality">Hospitality</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterLogistics">Logistics</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterDrivers">Drivers</a></li>
+            <li><a href="services.html" class="hover:text-brand-red transition" data-i18n="catFilterTechnical">Technical</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3" data-i18n="footerContactTitle">Riyadh Office</h4>
+          <div class="space-y-2 text-xs text-slate-600">
+            <div data-i18n="footerAddress">King Fahd Road, Al Olaya, Riyadh, KSA</div>
+            <div><a href="tel:+966501234567" class="hover:text-brand-red dir-ltr font-bold text-slate-800">+966 50 123 4567</a></div>
+            <div><a href="mailto:info@jawharatali.com" class="hover:text-brand-red text-slate-700">info@jawharatali.com</a></div>
+            <div class="text-slate-400" data-i18n="footerWorkingHours">Sun - Thu: 8:00 AM - 6:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div data-i18n="footerCopyright">© 2026 Jawharat Ali. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/966501234567" target="_blank" class="hover:text-brand-red transition">WhatsApp</a>
+          <a href="tel:+966501234567" class="hover:text-brand-red transition">Phone</a>
+          <a href="mailto:info@jawharatali.com" class="hover:text-brand-red transition">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- ================= MOBILE BOTTOM NAVIGATION BAR (APP-STYLE FOOTER NAVBAR) ================= -->
+  <aside class="mobile-bottom-nav lg:hidden">
+    <div class="grid grid-cols-5 items-center justify-around px-1 py-1 w-full max-w-md mx-auto">
+      <a href="index.html" class="flex flex-col items-center justify-center py-1 transition-all group text-slate-500 hover:text-brand-red">
+        <div class="w-8 h-7 sm:w-10 sm:h-7 flex items-center justify-center rounded-full transition-colors text-slate-500 group-hover:text-brand-red">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+        </div>
+        <span class="text-[9.5px] sm:text-[10px] font-bold mt-0.5 tracking-tight truncate max-w-[62px] text-center" data-i18n="navHome">Home</span>
+      </a>
+      <a href="services.html" class="flex flex-col items-center justify-center py-1 transition-all group text-brand-red">
+        <div class="w-8 h-7 sm:w-10 sm:h-7 flex items-center justify-center rounded-full transition-colors bg-red-50 text-brand-red shadow-xs font-bold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+        </div>
+        <span class="text-[9.5px] sm:text-[10px] font-bold mt-0.5 tracking-tight truncate max-w-[62px] text-center" data-i18n="navServices">Categories</span>
+      </a>
+      <a href="about.html" class="flex flex-col items-center justify-center py-1 transition-all group text-slate-500 hover:text-brand-red">
+        <div class="w-8 h-7 sm:w-10 sm:h-7 flex items-center justify-center rounded-full transition-colors text-slate-500 group-hover:text-brand-red">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <span class="text-[9.5px] sm:text-[10px] font-bold mt-0.5 tracking-tight truncate max-w-[62px] text-center" data-i18n="navAbout">About Us</span>
+      </a>
+      <a href="why-us.html" class="flex flex-col items-center justify-center py-1 transition-all group text-slate-500 hover:text-brand-red">
+        <div class="w-8 h-7 sm:w-10 sm:h-7 flex items-center justify-center rounded-full transition-colors text-slate-500 group-hover:text-brand-red">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <span class="text-[9.5px] sm:text-[10px] font-bold mt-0.5 tracking-tight truncate max-w-[62px] text-center" data-i18n="navWhyUs">Why Us</span>
+      </a>
+      <a href="contact.html" class="flex flex-col items-center justify-center py-1 transition-all group text-slate-500 hover:text-brand-red">
+        <div class="w-8 h-7 sm:w-10 sm:h-7 flex items-center justify-center rounded-full transition-colors text-slate-500 group-hover:text-brand-red">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+        </div>
+        <span class="text-[9.5px] sm:text-[10px] font-bold mt-0.5 tracking-tight truncate max-w-[62px] text-center" data-i18n="navContact">Contact</span>
+      </a>
+    </div>
+  </aside>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);">
+  <defs>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <circle cx="500" cy="120" r="140" fill="#D4AF37" opacity="0.08" />
+  <circle cx="100" cy="280" r="150" fill="#C7222A" opacity="0.05" />
+  <!-- Hotel Architecture Pillars -->
+  <rect x="70" y="80" width="30" height="280" fill="#E2E8F0" rx="4" />
+  <rect x="490" y="80" width="30" height="280" fill="#E2E8F0" rx="4" />
+  <ellipse cx="300" cy="360" rx="200" ry="20" fill="#E2E8F0" opacity="0.5" />
+  <!-- Chandelier -->
+  <g stroke="#D4AF37" stroke-width="1.5" opacity="0.8" fill="none">
+    <line x1="300" y1="0" x2="300" y2="50" />
+    <path d="M260,50 Q300,75 340,50" />
+    <circle cx="260" cy="50" r="3" fill="#FDE047" />
+    <circle cx="300" cy="65" r="4" fill="#FDE047" />
+    <circle cx="340" cy="50" r="3" fill="#FDE047" />
+  </g>
+  <!-- Character -->
+  <g transform="translate(230, 95)">
+    <rect x="55" y="180" width="22" height="90" fill="#1E293B" rx="4" />
+    <rect x="85" y="180" width="22" height="90" fill="#1E293B" rx="4" />
+    <path d="M35,65 L125,65 L135,185 L25,185 Z" fill="#334155" />
+    <polygon points="65,65 95,65 80,105" fill="#FFFFFF" />
+    <polygon points="76,75 84,75 80,82" fill="#C7222A" />
+    <polygon points="72,72 88,85 88,72 72,85" fill="#C7222A" />
+    <path d="M45,65 L65,65 L80,130 L95,65 L115,65 L125,185 L35,185 Z" fill="#1E293B" />
+    <rect x="95" y="95" width="22" height="8" rx="2" fill="url(#goldAccent)" />
+    <circle cx="98" cy="99" r="2" fill="#C7222A" />
+    <circle cx="80" cy="35" r="26" fill="#F0C09F" />
+    <path d="M54,28 Q80,5 106,28 Z" fill="#1C1E22" />
+    <g transform="translate(-10, 110)">
+      <ellipse cx="25" cy="45" rx="35" ry="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2" />
+      <path d="M0,45 C0,20 50,20 50,45 Z" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" />
+      <circle cx="25" cy="20" r="4" fill="#D4AF37" />
+    </g>
+  </g>
+  <!-- Category Badge -->
+  <rect x="25" y="25" width="210" height="32" rx="16" fill="#FFFFFF" stroke="#C7222A" stroke-width="1.5" />
+  <text x="130" y="46" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" fill="#C7222A" text-anchor="middle">HOSPITALITY &amp; CATERING</text>
+</svg>
